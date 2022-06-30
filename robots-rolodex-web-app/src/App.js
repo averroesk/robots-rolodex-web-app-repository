@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import CardList from './components/card-list/card-list.component';
 import SearchBox from './components/search-box/search-box.component';
 import './App.css';
+import GitHubLogo from './images/GitHub-Mark-Light-64px.png';
 
 const App = () => {
 	const [searchField, setSearchField] = useState('');
@@ -30,7 +31,12 @@ const App = () => {
 	
 	return (
 		<div className="App">
-			<h1 className='app-title'>Robots Rolodex</h1>
+			<header>
+				<a href="https://github.com/averroesk/robots-rolodex-web-app-repository" target="_blank" rel="noreferrer">
+					<img className='logo' src={GitHubLogo} alt="GitHub Logo" />
+				</a>
+				<h1 className='app-title'>Robots Rolodex</h1>
+			</header>
 			<SearchBox
 				className='robots-search-box' 
 				placeholder='search robots'
